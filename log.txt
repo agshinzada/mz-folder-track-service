@@ -1,0 +1,328 @@
+----NEW ADDED FILE----22.02.2024, 15:04:50
+              File files\test - Copy (2).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:04:50
+              File files\test - Copy.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:04:50
+              File files\test - Copy (3).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:04:50
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:09:03
+              File files\test - Copy (3).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:09:03
+              File files\test - Copy.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:09:03
+              File files\test - Copy (2).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:09:03
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:13:00
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:13:00
+              File files\test - Copy (2).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:13:01
+              File files\test - Copy.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:13:01
+              File files\test - Copy (3).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:20:24
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:22:50
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:25:20
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:26:22
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:27:17
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:27:17
+              File files\test - Copy (2).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:27:17
+              File files\test - Copy.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:27:17
+              File files\test - Copy (3).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:46:20
+              File files\test - Copy (3).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:46:20
+              File files\test - Copy (2).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:46:20
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:46:20
+              File files\test - Copy.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:49:16
+              File files\test - Copy (3).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:49:16
+              File files\test - Copy.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:49:16
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:49:16
+              File files\test - Copy (2).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:20
+              File files\test - Copy (3).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:20
+              File files\test - Copy.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:20
+              File files\test - Copy (2).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:20
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:31
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:31
+              File files\test - Copy (3).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:31
+              File files\test - Copy.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:31
+              File files\test - Copy (2).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:40
+              File files\test.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:40
+              File files\test - Copy.jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:40
+              File files\test - Copy (3).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----22.02.2024, 15:50:40
+              File files\test - Copy (2).jpg has been added. Extracted string: 24-25059-0000001
+----NEW ADDED FILE----23.02.2024, 16:22:51
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:22:51
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:22:51
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:22:51
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:23:42
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:23:42
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:23:42
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:23:42
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:24:25
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:24:25
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:24:25
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:24:25
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:30:39
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:30:39
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:30:39
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:30:39
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:32:58
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:32:58
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:32:58
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:32:58
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:34:13
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:34:13
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:34:13
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:34:13
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:40:16
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:40:16
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:40:16
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:40:16
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:40:52
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:42:59
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:44:33
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:46:05
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:46:34
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:48:08
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:50:54
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:51:35
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:52:29
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:52:48
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:53:59
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 16:55:45
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----EXIST FILE----23.02.2024, 16:56:23
+                File files\test - Copy.jpg already have.
+                Extracted string: 24-25059-0000001
+                Type:8
+----EXIST FILE----23.02.2024, 16:56:23
+                File files\test - Copy (3).jpg already have.
+                Extracted string: 24-25059-0000001
+                Type:8
+----EXIST FILE----23.02.2024, 16:56:24
+                File files\test - Copy (2).jpg already have.
+                Extracted string: 24-25059-0000001
+                Type:8
+----NEW ADDED FILE----23.02.2024, 17:11:10
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:11:10
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:11:10
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:11:10
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:13:00
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:13:00
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:13:00
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:13:00
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:13:23
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:13:23
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:13:23
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:13:23
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:32:21
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:32:21
+              File files\test - Copy.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:32:21
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:32:21
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:33:04
+              File files\test - Copy (3).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:33:04
+              File files\test.jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8
+----NEW ADDED FILE----23.02.2024, 17:33:04
+              File files\test - Copy (2).jpg has been added.
+              Extracted string: 24-25059-0000001
+              Type:8

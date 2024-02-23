@@ -1,0 +1,27 @@
+{
+  "name": "file-tracking",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "File tracking service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "file",
+    "tracking",
+    "folder",
+    "service"
+  ],
+  "author": "Agshin Ismayilzada",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7",
+    "tesseract.js": "^5.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
