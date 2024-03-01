@@ -2,11 +2,32 @@ import { createWorker } from "tesseract.js";
 import fs from "fs-extra";
 import path from "path";
 import chokidar from "chokidar";
-import { checkFileExist, sendFileCopy } from "./requests.js";
+import { sendErrorProcess, sendFileCopy } from "./requests.js";
 const pattern = /\b\d{2}-\d{5}-\d{7}\b/;
 const patternType = /^[A-Za-z]/;
 const directoryToTrack = "./files";
 const logFilePath = "./log.txt";
+
+let processedFiles = new Set();
+
+// LOG FAYLI OXUYUR VE FAYL ADLARINI YIGIR
+if (fs.existsSync(logFilePath)) {
+  const logFileContent = fs.readFileSync(logFilePath, "utf8");
+  const logLines = logFileContent.split("\n");
+  let currentFile = null;
+  logLines.forEach((line) => {
+    if (line.trim().startsWith("File")) {
+      currentFile = line
+        .trim()
+        .replace(/^File: /, "")
+        .replace(/ has been added\.$/, "");
+    } else if (line.startsWith("----NEW")) {
+      currentFile = null;
+    } else if (currentFile) {
+      processedFiles.add(currentFile.trim());
+    }
+  });
+}
 
 const watcher = chokidar.watch(directoryToTrack, {
   ignored: /(^|[\/\\])\../, // ignore dotfiles
@@ -16,31 +37,48 @@ const watcher = chokidar.watch(directoryToTrack, {
 try {
   watcher
     .on("add", async (url) => {
-      console.log(`File ${url} has been added`);
-      const worker = await createWorker("eng");
-      const ext = path.extname(url);
-      if (ext === ".jpg" || ext === ".png") {
-        const ret = await worker.recognize(url);
-        if (ret.data.text) {
-          const { extractedInvoice, extractedType, fileName } =
-            generateFileParams(ret.data.text, ext);
-          if (extractedInvoice && extractedType) {
-            await sendFileCopy(url, fileName, extractedInvoice, extractedType);
-            appendToLogFile(
-              logFilePath,
-              `----NEW ADDED FILE----${new Date().toLocaleString("az")}
-              File ${url} has been added.
-              Extracted string: ${extractedInvoice}
-              Type:${extractedType}\n`
-            );
-
-            console.log(extractedInvoice);
-            console.log(extractedType);
-          } else {
-            console.log("Fayl duzgun deyil!");
+      if (!processedFiles.has(url)) {
+        console.log(`File ${url} has been added`);
+        const worker = await createWorker("eng");
+        const ext = path.extname(url);
+        const bas = path.basename(url);
+        if (ext === ".jpg" || ext === ".png") {
+          const ret = await worker.recognize(url);
+          if (ret.data.text) {
+            const { extractedInvoice, extractedType, fileName } =
+              generateFileParams(ret.data.text, ext);
+            if (extractedInvoice && extractedType) {
+              // FAYLI SERVERE GONDERIR
+              await sendFileCopy(
+                url,
+                fileName,
+                extractedInvoice,
+                extractedType
+              );
+              appendToLogFile(
+                logFilePath,
+                `----NEW ADDED FILE----${new Date().toLocaleString("az")}
+                File: ${url} has been added.
+                Extracted string: ${extractedInvoice}
+                Type:${extractedType}\n`
+              );
+              console.log(extractedInvoice);
+              console.log(extractedType);
+            } else {
+              // XETA YARANAN FAYL DATASIN SERVERE GONDERIR
+              await sendErrorProcess(url, bas);
+              // LOGLAYIR
+              appendToLogFile(
+                logFilePath,
+                `----NEW ADDED FILE----${new Date().toLocaleString("az")}
+                File: ${url} has been added.
+                Extracted string: ${extractedInvoice}
+                Type:${extractedType}\n`
+              );
+            }
           }
+          await worker.terminate();
         }
-        await worker.terminate();
       }
     })
     .on("change", async (url) => {})
@@ -49,7 +87,7 @@ try {
       console.error(`Watcher error: ${error}`);
     });
 } catch (error) {
-  console.log(error);
+  console.log("File format not valid!");
 }
 
 console.log(`Now watching ${directoryToTrack} for changes...`);

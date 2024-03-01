@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "chokidar": "^3.6.0",
+    "dotenv": "^16.4.5",
     "fs-extra": "^11.2.0",
     "path": "^0.12.7",
     "tesseract.js": "^5.0.4"

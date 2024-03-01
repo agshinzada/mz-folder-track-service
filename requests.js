@@ -1,5 +1,6 @@
 import fs from "fs-extra";
 import path from "path";
+import "dotenv/config";
 
 export async function sendFileCopy(filePath, fileName, invoice, type) {
   try {
@@ -15,8 +16,7 @@ export async function sendFileCopy(filePath, fileName, invoice, type) {
         invoicecode: invoice,
         filename: fileName,
         invoicetype: type,
-        token:
-          "jFfV49WAVJq80FseLmD2QLk1hVHxUWBP3KMOVjm7ZiJPT3DQXXgFiIecDxOXlXmS",
+        token: process.env.TOKEN,
       },
     });
 
@@ -36,10 +36,26 @@ export async function sendFileCopy(filePath, fileName, invoice, type) {
   }
 }
 
+export async function sendErrorProcess(filePath, fileName) {
+  try {
+    const response = await fetch("http://localhost:5180/api/upload/error", {
+      method: "POST",
+      body: JSON.stringify({
+        filePath,
+        fileName,
+        token: process.env.TOKEN,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (error) {}
+}
+
 export async function checkFileExist(invoice, type) {
   try {
     const response = await fetch(
-      `http://localhost:5180/api/upload?i=${invoice}&t=${type}&token=jFfV49WAVJq80FseLmD2QLk1hVHxUWBP3KMOVjm7ZiJPT3DQXXgFiIecDxOXlXmS`
+      `http://localhost:5180/api/upload?i=${invoice}&t=${type}&token=${process.env.TOKEN}`
     );
 
     return response.json();
