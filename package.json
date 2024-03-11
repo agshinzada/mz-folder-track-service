@@ -19,8 +19,10 @@
     "chokidar": "^3.6.0",
     "dotenv": "^16.4.5",
     "fs-extra": "^11.2.0",
+    "node-windows": "^1.0.0-beta.8",
     "path": "^0.12.7",
-    "tesseract.js": "^5.0.4"
+    "tesseract.js": "^5.0.4",
+    "url": "^0.11.3"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"

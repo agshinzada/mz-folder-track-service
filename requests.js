@@ -2,13 +2,19 @@ import fs from "fs-extra";
 import path from "path";
 import "dotenv/config";
 
-export async function sendFileCopy(filePath, fileName, invoice, type) {
+export async function sendFileCopy(
+  filePath,
+  fileName,
+  invoice,
+  type,
+  read_status
+) {
   try {
     // Read the file content
     const fileContent = await fs.readFile(filePath);
 
     // Send the file content to the API
-    const response = await fetch("http://localhost:5180/api/upload", {
+    const response = await fetch(`${process.env.API_URL}/upload`, {
       method: "POST",
       body: fileContent,
       headers: {
@@ -16,6 +22,7 @@ export async function sendFileCopy(filePath, fileName, invoice, type) {
         invoicecode: invoice,
         filename: fileName,
         invoicetype: type,
+        readstatus: read_status,
         token: process.env.TOKEN,
       },
     });
@@ -36,33 +43,33 @@ export async function sendFileCopy(filePath, fileName, invoice, type) {
   }
 }
 
-export async function sendErrorProcess(filePath, fileName) {
-  try {
-    const response = await fetch("http://localhost:5180/api/upload/error", {
-      method: "POST",
-      body: JSON.stringify({
-        filePath,
-        fileName,
-        token: process.env.TOKEN,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-  } catch (error) {}
-}
+// export async function sendErrorProcess(filePath, fileName) {
+//   try {
+//     const response = await fetch(`${process.env.API_URL}/upload/error`, {
+//       method: "POST",
+//       body: JSON.stringify({
+//         filePath,
+//         fileName,
+//         token: process.env.TOKEN,
+//       }),
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     });
+//   } catch (error) {}
+// }
 
-export async function checkFileExist(invoice, type) {
-  try {
-    const response = await fetch(
-      `http://localhost:5180/api/upload?i=${invoice}&t=${type}&token=${process.env.TOKEN}`
-    );
+// export async function checkFileExist(invoice, type) {
+//   try {
+//     const response = await fetch(
+//       `${process.env.API_URL}/upload?i=${invoice}&t=${type}&token=${process.env.TOKEN}`
+//     );
 
-    return response.json();
-  } catch (error) {
-    console.error(
-      `Error occurred while sending file copy for ${filePath} to the API:`,
-      error
-    );
-  }
-}
+//     return response.json();
+//   } catch (error) {
+//     console.error(
+//       `Error occurred while sending file copy for ${filePath} to the API:`,
+//       error
+//     );
+//   }
+// }

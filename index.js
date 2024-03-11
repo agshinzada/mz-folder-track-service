@@ -2,11 +2,42 @@ import { createWorker } from "tesseract.js";
 import fs from "fs-extra";
 import path from "path";
 import chokidar from "chokidar";
-import { sendErrorProcess, sendFileCopy } from "./requests.js";
+
+import { sendFileCopy } from "./requests.js";
+
+// GUNLUK FOLDER ADI YARADIR
+const today = new Date();
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, "0");
+const day = String(today.getDate()).padStart(2, "0");
+const formattedDate = `${year}-${month}-${day}`;
+
+// LOG PATTERN
 const pattern = /\b\d{2}-\d{5}-\d{7}\b/;
 const patternType = /^[A-Za-z]/;
-const directoryToTrack = "./files";
+
+const folderName = formattedDate;
+const __dirname = process.cwd();
+const folderPath = path.join(__dirname, "files");
+const uploadFolder = path.join(folderPath, folderName);
+
 const logFilePath = "./log.txt";
+
+// FOLDER YARADIR
+if (!fs.existsSync(uploadFolder)) {
+  fs.mkdirSync(uploadFolder);
+  appendToLogFile(
+    logFilePath,
+    `----NEW FOLDER CREATED----${new Date().toLocaleString("az")}
+    `
+  );
+} else {
+  appendToLogFile(
+    logFilePath,
+    `----FOLDER EXIST----${new Date().toLocaleString("az")}
+    `
+  );
+}
 
 let processedFiles = new Set();
 
@@ -29,7 +60,7 @@ if (fs.existsSync(logFilePath)) {
   });
 }
 
-const watcher = chokidar.watch(directoryToTrack, {
+const watcher = chokidar.watch(uploadFolder, {
   ignored: /(^|[\/\\])\../, // ignore dotfiles
   persistent: true,
 });
@@ -41,19 +72,19 @@ try {
         console.log(`File ${url} has been added`);
         const worker = await createWorker("eng");
         const ext = path.extname(url);
-        const bas = path.basename(url);
         if (ext === ".jpg" || ext === ".png") {
           const ret = await worker.recognize(url);
           if (ret.data.text) {
-            const { extractedInvoice, extractedType, fileName } =
+            const { extractedInvoice, extractedType, filename } =
               generateFileParams(ret.data.text, ext);
             if (extractedInvoice && extractedType) {
               // FAYLI SERVERE GONDERIR
               await sendFileCopy(
                 url,
-                fileName,
+                filename,
                 extractedInvoice,
-                extractedType
+                extractedType,
+                1
               );
               appendToLogFile(
                 logFilePath,
@@ -66,7 +97,9 @@ try {
               console.log(extractedType);
             } else {
               // XETA YARANAN FAYL DATASIN SERVERE GONDERIR
-              await sendErrorProcess(url, bas);
+              const tempCode = generateRandomParam();
+              const tempFileName = "unread_" + tempCode + ext;
+              await sendFileCopy(url, tempFileName, tempCode, 0, 0);
               // LOGLAYIR
               appendToLogFile(
                 logFilePath,
@@ -90,7 +123,7 @@ try {
   console.log("File format not valid!");
 }
 
-console.log(`Now watching ${directoryToTrack} for changes...`);
+console.log(`Now watching ${uploadFolder} for changes...`);
 
 function appendToLogFile(logFilePath, logMessage) {
   fs.appendFile(logFilePath, logMessage, (err) => {
@@ -105,13 +138,21 @@ function generateFileParams(data, ext) {
   const matcheType = data.match(patternType);
   const extractedInvoice = matcheInvoice ? matcheInvoice[0] : null;
   const extractedType = matcheType ? (matcheType[0] === "S" ? 8 : 3) : null;
-  const fileName = `${extractedInvoice}_${extractedType}_${Math.random()
+  const filename = `${extractedInvoice}_${extractedType}_${Math.random()
     .toString(36)
     .substring(2, 6)}${ext}`;
 
   return {
     extractedInvoice,
     extractedType,
-    fileName,
+    filename,
   };
+}
+
+function generateRandomParam(params) {
+  let name = "";
+  for (let i = 0; i < 16; i++) {
+    name += Math.floor(Math.random() * 10); // 0 ile 9 arasında rastgele rakam üretir.
+  }
+  return name;
 }
