@@ -2,3 +2,5 @@
 /files
 eng.traineddata
 log.txt
+.env
+env
