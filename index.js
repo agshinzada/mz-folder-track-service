@@ -13,7 +13,8 @@ const day = String(today.getDate()).padStart(2, "0");
 const formattedDate = `${year}-${month}-${day}`;
 
 // LOG PATTERN
-const pattern = /\b\d{2}-\d{5}-\d{7}\b/;
+// const pattern = /\b\d{2}-\d{2,8}-\d{7}\b/;
+const pattern = /\d{2}-\d{3,8}-\d{3,8}/;
 const patternType = /^[A-Za-z]/;
 
 const folderName = formattedDate;
@@ -93,8 +94,6 @@ try {
                 Extracted string: ${extractedInvoice}
                 Type:${extractedType}\n`
               );
-              console.log(extractedInvoice);
-              console.log(extractedType);
             } else {
               // XETA YARANAN FAYL DATASIN SERVERE GONDERIR
               const tempCode = generateRandomParam();
@@ -137,7 +136,16 @@ function generateFileParams(data, ext) {
   const matcheInvoice = data.match(pattern);
   const matcheType = data.match(patternType);
   const extractedInvoice = matcheInvoice ? matcheInvoice[0] : null;
-  const extractedType = matcheType ? (matcheType[0] === "S" ? 8 : 3) : null;
+  const extractedType = (() => {
+    if (matcheType && matcheType[0] === "S") {
+      return 8;
+    } else if (matcheType && matcheType[0] === "Q") {
+      return 3;
+    } else {
+      return null;
+    }
+  })();
+
   const filename = `${extractedInvoice}_${extractedType}_${Math.random()
     .toString(36)
     .substring(2, 6)}${ext}`;

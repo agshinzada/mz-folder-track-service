@@ -1,2 +1,79 @@
 ----NEW FOLDER CREATED----11.03.2024, 17:01:44
-    
+    ----NEW FOLDER CREATED----29.08.2024, 14:31:07
+    ----FOLDER EXIST----29.08.2024, 14:36:09
+----FOLDER EXIST----29.08.2024, 15:05:15
+  
+----FOLDER EXIST----29.08.2024, 15:07:40
+
+----FOLDER EXIST----29.08.2024, 15:10:49
+ ----FOLDER EXIST----29.08.2024, 15:11:28
+    ----FOLDER EXIST----29.08.2024, 15:17:29
+   
+----NEW FOLDER CREATED----06.09.2024, 15:08:10
+    ----NEW ADDED FILE----06.09.2024, 15:18:33
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0002.jpg has been added.
+                Extracted string: 24-122226-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:34
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0006.jpg has been added.
+                Extracted string: 24-122249-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:34
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0005.jpg has been added.
+                Extracted string: 24-122248-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:34
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0001.jpg has been added.
+                Extracted string: 24-122222-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:36
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0004.jpg has been added.
+                Extracted string: 24-122227-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:36
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0009.jpg has been added.
+                Extracted string: 24-122151-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:36
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0012.jpg has been added.
+                Extracted string: 24-122205-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:36
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0010.jpg has been added.
+                Extracted string: 24-122192-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:36
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0011.jpg has been added.
+                Extracted string: 24-122193-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:37
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0008.jpg has been added.
+                Extracted string: 24-122150-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:38
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0003.jpg has been added.
+                Extracted string: 24-122219-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:38
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0007.jpg has been added.
+                Extracted string: 24-122254-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:18:39
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0013.jpg has been added.
+                Extracted string: 24-122206-000001
+                Type:8
+----NEW ADDED FILE----06.09.2024, 15:24:07
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0014.jpg has been added.
+                Extracted string: 24-122222-000001
+                Type:3
+----NEW ADDED FILE----06.09.2024, 15:26:11
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-06\img_09062024_0015.jpg has been added.
+                Extracted string: null
+                Type:3
+----NEW FOLDER CREATED----12.09.2024, 10:01:29
+   
+----FOLDER EXIST----12.09.2024, 10:25:23
+    ----NEW ADDED FILE----12.09.2024, 10:25:27
+                File: C:\Users\agshi\OneDrive\Desktop\Projects\file-tracking\files\2024-09-12\24-59216-0000001_3_dcmx.jpg has been added.
+                Extracted string: 24-59216-0000001
+                Type:null
