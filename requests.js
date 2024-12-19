@@ -14,7 +14,7 @@ export async function sendFileCopy(
     const fileContent = await fs.readFile(filePath);
 
     // Send the file content to the API
-    const response = await fetch(`${process.env.API_URL}/upload`, {
+    const response = await fetch(`${process.env.API_URL}/files/upload`, {
       method: "POST",
       body: fileContent,
       headers: {
@@ -30,14 +30,46 @@ export async function sendFileCopy(
     // Check if the request was successful
     if (response.ok) {
       console.log(`File copy for ${filePath} sent successfully to the API`);
+      return true;
     } else {
       console.error(
         `Failed to send file copy for ${filePath} to the API. Status code: ${response.status}`
       );
+      return false;
     }
   } catch (error) {
     console.error(
       `Error occurred while sending file copy for ${filePath} to the API:`,
+      error
+    );
+    return false;
+  }
+}
+
+export async function sendTrackingLogToServer(data) {
+  try {
+    // Send the file content to the API
+    const response = await fetch(
+      `${process.env.API_URL}/logs?token=${process.env.TOKEN}`,
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    // Check if the request was successful
+    if (response.ok) {
+      console.log(`File log for ${data.filePath} sent successfully to the API`);
+    } else {
+      console.error(
+        `Failed to send log for ${data.filePath} to the API. Status code: ${response.status}`
+      );
+    }
+  } catch (error) {
+    console.error(
+      `Error occurred while sending file log for ${filePath} to the API:`,
       error
     );
   }

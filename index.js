@@ -3,7 +3,7 @@ import fs from "fs-extra";
 import path from "path";
 import chokidar from "chokidar";
 
-import { sendFileCopy } from "./requests.js";
+import { sendFileCopy, sendTrackingLogToServer } from "./requests.js";
 
 // GUNLUK FOLDER ADI YARADIR
 const today = new Date();
@@ -80,33 +80,53 @@ try {
               generateFileParams(ret.data.text, ext);
             if (extractedInvoice && extractedType) {
               // FAYLI SERVERE GONDERIR
-              await sendFileCopy(
+              const res = await sendFileCopy(
                 url,
                 filename,
                 extractedInvoice,
                 extractedType,
                 1
               );
-              appendToLogFile(
-                logFilePath,
-                `----NEW ADDED FILE----${new Date().toLocaleString("az")}
-                File: ${url} has been added.
-                Extracted string: ${extractedInvoice}
-                Type:${extractedType}\n`
-              );
+              if (res) {
+                await sendTrackingLogToServer({
+                  filePath: url,
+                  fileName: filename,
+                  ficheNo: extractedInvoice,
+                  ficheType: extractedType,
+                  logType: 1,
+                  orgFileName: path.basename(url),
+                });
+                appendToLogFile(
+                  logFilePath,
+                  `----NEW ADDED FILE----${new Date().toLocaleString("az")}
+                  File: ${url} has been added.
+                  Extracted string: ${extractedInvoice}
+                  Type:${extractedType}\n`
+                );
+              }
             } else {
               // XETA YARANAN FAYL DATASIN SERVERE GONDERIR
               const tempCode = generateRandomParam();
               const tempFileName = "unread_" + tempCode + ext;
-              await sendFileCopy(url, tempFileName, tempCode, 0, 0);
-              // LOGLAYIR
-              appendToLogFile(
-                logFilePath,
-                `----NEW ADDED FILE----${new Date().toLocaleString("az")}
+              const res = await sendFileCopy(url, tempFileName, tempCode, 0, 0);
+              if (res) {
+                await sendTrackingLogToServer({
+                  filePath: url,
+                  fileName: tempFileName,
+                  ficheNo: tempCode,
+                  ficheType: 0,
+                  logType: 2,
+                  orgFileName: path.basename(url),
+                });
+                // LOGLAYIR
+                appendToLogFile(
+                  logFilePath,
+                  `----NEW ADDED FILE----${new Date().toLocaleString("az")}
                 File: ${url} has been added.
                 Extracted string: ${extractedInvoice}
                 Type:${extractedType}\n`
-              );
+                );
+              }
             }
           }
           await worker.terminate();
