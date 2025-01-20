@@ -1,5 +1,5 @@
 {
-  "name": "file-tracking",
+  "name": "mz-folder-track-service",
   "version": "1.0.0",
   "type": "module",
   "description": "File tracking service",
