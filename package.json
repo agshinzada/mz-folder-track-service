@@ -20,6 +20,7 @@
     "dotenv": "^16.4.5",
     "fs-extra": "^11.2.0",
     "node-windows": "^1.0.0-beta.8",
+    "p-queue": "^8.1.0",
     "path": "^0.12.7",
     "tesseract.js": "^5.0.4",
     "url": "^0.11.3"

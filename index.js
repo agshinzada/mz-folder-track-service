@@ -4,6 +4,8 @@ import path from "path";
 import chokidar from "chokidar";
 
 import { sendFileCopy, sendTrackingLogToServer } from "./requests.js";
+import PQueue from "p-queue";
+const queue = new PQueue({ concurrency: 3 }); // Tək-tək emal etsin
 
 // GUNLUK FOLDER ADI YARADIR
 const today = new Date();
@@ -69,69 +71,79 @@ const watcher = chokidar.watch(uploadFolder, {
 try {
   watcher
     .on("add", async (url) => {
-      if (!processedFiles.has(url)) {
-        console.log(`File ${url} has been added`);
-        const worker = await createWorker("eng");
-        const ext = path.extname(url);
-        if (ext === ".jpg" || ext === ".png") {
-          const ret = await worker.recognize(url);
-          if (ret.data.text) {
-            const { extractedInvoice, extractedType, filename } =
-              generateFileParams(ret.data.text, ext);
-            if (extractedInvoice && extractedType) {
-              // FAYLI SERVERE GONDERIR
-              const res = await sendFileCopy(
-                url,
-                filename,
-                extractedInvoice,
-                extractedType,
-                1
-              );
-              if (res) {
-                await sendTrackingLogToServer({
-                  filePath: url,
-                  fileName: filename,
-                  ficheNo: extractedInvoice,
-                  ficheType: extractedType,
-                  logType: 1,
-                  orgFileName: path.basename(url),
-                });
-                appendToLogFile(
-                  logFilePath,
-                  `----NEW ADDED FILE----${new Date().toLocaleString("az")}
-                  File: ${url} has been added.
-                  Extracted string: ${extractedInvoice}
-                  Type:${extractedType}\n`
-                );
-              }
-            } else {
-              // XETA YARANAN FAYL DATASIN SERVERE GONDERIR
-              const tempCode = generateRandomParam();
-              const tempFileName = "unread_" + tempCode + ext;
-              const res = await sendFileCopy(url, tempFileName, tempCode, 0, 0);
-              if (res) {
-                await sendTrackingLogToServer({
-                  filePath: url,
-                  fileName: tempFileName,
-                  ficheNo: tempCode,
-                  ficheType: 0,
-                  logType: 2,
-                  orgFileName: path.basename(url),
-                });
-                // LOGLAYIR
-                appendToLogFile(
-                  logFilePath,
-                  `----NEW ADDED FILE----${new Date().toLocaleString("az")}
-                File: ${url} has been added.
-                Extracted string: ${extractedInvoice}
-                Type:${extractedType}\n`
-                );
+      queue.add(async () => {
+        if (!processedFiles.has(url)) {
+          console.log(`File ${url} has been added`);
+          const worker = await createWorker("eng");
+          const ext = path.extname(url);
+          if (ext === ".jpg" || ext === ".png") {
+            const ret = await worker.recognize(url);
+            if (ret.data.text) {
+              const { extractedInvoice, extractedType, filename } =
+                generateFileParams(ret.data.text, ext);
+              console.log("extractedInvoice", extractedInvoice);
+              // console.log("extractedType", extractedType);
+              if (extractedInvoice && extractedType) {
+                // FAYLI SERVERE GONDERIR
+                // const res = await sendFileCopy(
+                //   url,
+                //   filename,
+                //   extractedInvoice,
+                //   extractedType,
+                //   1
+                // );
+                // if (res) {
+                //   await sendTrackingLogToServer({
+                //     filePath: url,
+                //     fileName: filename,
+                //     ficheNo: extractedInvoice,
+                //     ficheType: extractedType,
+                //     logType: 1,
+                //     orgFileName: path.basename(url),
+                //   });
+                //   appendToLogFile(
+                //     logFilePath,
+                //     `----NEW ADDED FILE----${new Date().toLocaleString("az")}
+                //     File: ${url} has been added.
+                //     Extracted string: ${extractedInvoice}
+                //     Type:${extractedType}\n`
+                //   );
+                // }
+              } else {
+                // XETA YARANAN FAYL DATASIN SERVERE GONDERIR
+                const tempCode = generateRandomParam();
+                const tempFileName = "unread_" + tempCode + ext;
+                // const res = await sendFileCopy(
+                //   url,
+                //   tempFileName,
+                //   tempCode,
+                //   0,
+                //   0
+                // );
+                // if (res) {
+                //   await sendTrackingLogToServer({
+                //     filePath: url,
+                //     fileName: tempFileName,
+                //     ficheNo: tempCode,
+                //     ficheType: 0,
+                //     logType: 2,
+                //     orgFileName: path.basename(url),
+                //   });
+                //   // LOGLAYIR
+                //   appendToLogFile(
+                //     logFilePath,
+                //     `----NEW ADDED FILE----${new Date().toLocaleString("az")}
+                //   File: ${url} has been added.
+                //   Extracted string: ${extractedInvoice}
+                //   Type:${extractedType}\n`
+                //   );
+                // }
               }
             }
+            await worker.terminate();
           }
-          await worker.terminate();
         }
-      }
+      });
     })
     .on("change", async (url) => {})
     .on("unlink", async (url) => {})

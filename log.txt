@@ -92,3 +92,7 @@
                 File: C:\Users\agshi\Desktop\Projects\file-tracking\files\2024-12-18\24-59216-0000001_3_dcmx.jpg has been added.
                 Extracted string: 24-59216-0000001
                 Type:null
+----NEW FOLDER CREATED----24.04.2025, 17:12:25
+    ----FOLDER EXIST----24.04.2025, 17:14:31
+    ----FOLDER EXIST----24.04.2025, 17:15:19
+    
