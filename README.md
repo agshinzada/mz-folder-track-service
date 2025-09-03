@@ -23,10 +23,10 @@ If a match is found, the corresponding image is uploaded to the server and linke
 ## Installation
 ```bash
 # Clone the repository
-git clone https://github.com/username/folder-tracking-service.git
+git clone https://github.com/username/mz-folder-track-service.git
 
 # Navigate into the project directory
-cd folder-tracking-service
+cd mz-folder-track-service
 
 # Install dependencies
 npm install
